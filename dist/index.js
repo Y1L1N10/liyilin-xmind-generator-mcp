@@ -25,10 +25,10 @@ catch (error) {
     // Don't exit immediately to allow the error to be reported back to the client
     // process.exit(1);
 }
-// Create a temporary directory for storing generated XMind files
-const TEMP_DIR = path.join(os.tmpdir(), 'xmind-generator-mcp');
-if (!fs.existsSync(TEMP_DIR)) {
-    fs.mkdirSync(TEMP_DIR, { recursive: true });
+// Create a default directory in user's Documents folder for storing generated XMind files
+const DEFAULT_DIR = path.join(os.homedir(), 'Documents', 'XmindFiles');
+if (!fs.existsSync(DEFAULT_DIR)) {
+    fs.mkdirSync(DEFAULT_DIR, { recursive: true });
 }
 // Define the schema for our mind map generation tool
 const RelationshipSchema = z.object({
@@ -80,8 +80,8 @@ server.tool('generate-mind-map', GenerateMindMapSchema.shape, async (params) => 
         // Get output path with priority:
         // 1. Parameter provided in the tool call (params.outputPath)
         // 2. Environment variable (process.env.outputPath)
-        // 3. Default temporary directory (TEMP_DIR)
-        const baseOutputPath = params.outputPath || process.env.outputPath || TEMP_DIR;
+        // 3. Default Documents/XmindFiles directory (DEFAULT_DIR)
+        const baseOutputPath = params.outputPath || process.env.outputPath || DEFAULT_DIR;
         // If baseOutputPath is a directory, append the filename
         // If it's a file path (has extension), use it directly
         let outputPath;
