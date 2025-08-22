@@ -1,0 +1,43 @@
+{
+    "title": "项目计划",
+    "filename": "project-plan",
+    "topics": [
+      {
+        "title": "需求分析",
+        "note": "收集和分析项目需求",
+        "children": [
+          {
+            "title": "用户调研",
+            "labels": ["优先级: 高"]
+          },
+          {
+            "title": "竞品分析",
+            "markers": ["Task.quarter"]
+          }
+        ]
+      },
+      {
+        "title": "开发阶段",
+        "children": [
+          {
+            "title": "前端开发",
+            "markers": ["Arrow.refresh"]
+          },
+          {
+            "title": "后端开发"
+          }
+        ]
+      },
+      {
+        "title": "测试",
+        "children": [
+          {
+            "title": "单元测试"
+          },
+          {
+            "title": "集成测试"
+          }
+        ]
+      }
+    ]
+  }

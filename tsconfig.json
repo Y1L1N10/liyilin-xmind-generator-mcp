@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+      "target": "ES2022",           // 编译目标：现代JS语法，支持最新特性
+      "module": "Node16",           // 模块系统：Node.js 16+的ESM模块
+      "moduleResolution": "Node16", // 模块解析：按Node.js方式查找模块
+      "esModuleInterop": true,      // 兼容CommonJS和ESM混合使用
+      "outDir": "./dist",           // 编译输出目录
+      "rootDir": "./src",           // 源码目录
+      "strict": true,               // 严格模式：更好的类型检查
+      "declaration": true,          // 生成.d.ts类型声明文件
+      "skipLibCheck": true,         // 跳过库文件检查，加快编译
+      "forceConsistentCasingInFileNames": true // 强制文件名大小写一致
+    },
+    "include": ["src/**/*"],        // 包含src下所有文件
+    "exclude": ["node_modules", "dist"] // 排除这些目录
+  }
