@@ -1,6 +1,6 @@
 {
       "name": "@liyilin/xmind-generator-mcp",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "description": "Enhanced MCP server for generating XMind mind maps - Independent version",
       "main": "dist/index.js",
       "type": "module",
