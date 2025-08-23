@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+*.log
+
+# Build output  
+dist/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Package files
+*.tgz
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# Temporary folders
+tmp/
+temp/
